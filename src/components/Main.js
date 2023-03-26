@@ -42,9 +42,12 @@ const MainComp = styled.div`
   overflow: hidden;
 `;
 
+// Env variable for API
+const { REACT_APP_API_URL } = process.env;
+
 let socket;
 const Project = (props) => {
-  const ENDPOINT = "http://localhost:5000";
+  const ENDPOINT = REACT_APP_API_URL;
   const [redirect, setRedirect] = useState(false);
 
   const {
